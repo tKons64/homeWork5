@@ -38,7 +38,27 @@ public class Main {
             System.out.println("Ошибка работы сайта! Обратитесь к администратору");
         }
 
+// Задание №3
+        System.out.println("");
+        System.out.println("Задание №3:");
 
+        var year = 2015;
 
+        boolean itEveryHundredthYear = (year % 100) == 0;
+        boolean itEveryFourHundredthYear = (year % 400) == 0;
+        boolean itHighYear = (year % 4) == 0;
+
+        if (itEveryHundredthYear) {
+            System.out.println("Год не является високосным, т.к. это сотый год!");
+        }
+        else if (itEveryFourHundredthYear) {
+            System.out.println("Год не является високосным, т.к. это четырехсотый год!");
+            }
+        else if (itHighYear) {
+            System.out.println("Год является високосным!");
+        }
+        else {
+            System.out.println("Год не является високосным!");
+        }
     }
 }
