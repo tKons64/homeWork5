@@ -42,7 +42,7 @@ public class Main {
         System.out.println("");
         System.out.println("Задание №3:");
 
-        var year = 2015;
+        var year = 2024;
 
         boolean itEveryHundredthYear = (year % 100) == 0;
         boolean itEveryFourHundredthYear = (year % 400) == 0;
