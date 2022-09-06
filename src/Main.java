@@ -65,17 +65,17 @@ public class Main {
         System.out.println("");
         System.out.println("Задание №4:");
 
-        short deliveryDistance = 21;
-        short deliveryPeriod = 0;
-        if (deliveryDistance <= 20) {
-            deliveryPeriod = 1;
-        } else if (deliveryDistance <= 60) {
-            deliveryPeriod = 2;
-        } else if (deliveryDistance <= 100) {
-            deliveryPeriod = 3;
+        short deliveryDistance = 101;
+        short deliveryPeriod = 1;
+        if (deliveryDistance > 20) {
+            deliveryPeriod++;
         }
-        else {
+        if (deliveryDistance > 60) {
+            deliveryPeriod++;
+        }
+        if (deliveryDistance > 100) {
             System.out.println("На расстоние более 100 км. не доставляем!");
+            deliveryPeriod = 0;
         }
 
         if (deliveryPeriod != 0) {
