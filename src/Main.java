@@ -60,5 +60,29 @@ public class Main {
         else {
             System.out.println("Год не является високосным!");
         }
+
+// Задание №4
+        System.out.println("");
+        System.out.println("Задание №4:");
+
+        short deliveryDistance = 21;
+        short deliveryPeriod = 0;
+        if (deliveryDistance <= 20) {
+            deliveryPeriod = 1;
+        } else if (deliveryDistance <= 60) {
+            deliveryPeriod = 2;
+        } else if (deliveryDistance <= 100) {
+            deliveryPeriod = 3;
+        }
+        else {
+            System.out.println("На расстоние более 100 км. не доставляем!");
+        }
+
+        if (deliveryPeriod != 0) {
+            System.out.println("Потребуется дней: " + deliveryPeriod);
+        }
+
+
+
     }
 }
