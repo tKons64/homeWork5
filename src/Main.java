@@ -82,6 +82,36 @@ public class Main {
             System.out.println("Потребуется дней: " + deliveryPeriod);
         }
 
+// Задание №5
+        System.out.println("");
+        System.out.println("Задание №5:");
+
+        byte monthNumber = 13;
+
+        switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("Этот месяц относится к сезону - зима!");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Этот месяц относится к сезону - весна!");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Этот месяц относится к сезону - лето!");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Этот месяц относится к сезону - осень!");
+                break;
+            default:
+                System.out.println("Такого месяца не существует!");
+            }
 
 
     }
