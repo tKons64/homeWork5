@@ -113,6 +113,32 @@ public class Main {
                 System.out.println("Такого месяца не существует!");
             }
 
+// Задание №6
+        System.out.println("");
+        System.out.println("Задание №6:");
+
+        byte age = 23;
+        int salary = 100000;
+        double creditLimit = 0;
+
+        if (age < 23) {
+            creditLimit = salary * 2;            
+        }
+        else {
+            creditLimit = salary * 3;
+        }
+
+        if (salary >= 80_000) {
+            creditLimit = creditLimit * 1.5;
+        } else if (salary >= 50_000) {
+            creditLimit = creditLimit * 1.2;
+        }
+
+        if (creditLimit > 0) {
+            System.out.println("Мы готовы выдать вам кредитную карту с лимитом - " + creditLimit +" рублей.");
+        } else {
+            System.out.println("Мы, к сожалению, не готовы выдать вам кредитную карту.");
+        }
 
     }
 }
