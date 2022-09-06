@@ -140,5 +140,41 @@ public class Main {
             System.out.println("Мы, к сожалению, не готовы выдать вам кредитную карту.");
         }
 
+// Задание №7
+        System.out.println("");
+        System.out.println("Задание №7:");
+
+        byte age_x = 18;
+        int salary_x = 50_000;
+        int wantedSum = 330_000;
+        double monthlyPayment = 0;
+
+        float baseRate = 10f;
+        short periodCredit = 12;
+        var maxPayment = salary_x * 0.5; //максимально допустимый платеж
+
+        if (age_x < 23) {
+            baseRate = baseRate + 1;
+        } else if (age_x < 30) {
+            baseRate = (float) (baseRate + 0.5);
+        }
+
+        if (salary_x > 80_000) {
+            baseRate = (float) (baseRate - 0.7);
+        }
+
+        baseRate = baseRate / 100; //приведем ставку к процентной
+
+        double monthlyRate = 0;
+        monthlyRate = baseRate / 12;
+
+        monthlyPayment = wantedSum * (monthlyRate * Math.pow(1 + monthlyRate, periodCredit) / (Math.pow(1 + monthlyRate, periodCredit) - 1));
+
+        if (monthlyPayment < maxPayment) {
+            System.out.println("Максимальный платеж при ЗП - " + salary_x + " равен " + maxPayment + " рублей. Платеж по кредиту " + monthlyPayment + " рублей. Одобрено!");
+        }else {
+            System.out.println("Максимальный платеж при ЗП - " + salary_x + " равен " + maxPayment + " рублей. Платеж по кредиту " + monthlyPayment + " рублей. Отказано!");
+        }
+
     }
 }
